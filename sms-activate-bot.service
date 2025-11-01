@@ -1,0 +1,17 @@
+[Unit]
+Description=SMS-Activate Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=your_username
+WorkingDirectory=/path/to/sms-activate
+Environment="PATH=/path/to/sms-activate/venv/bin"
+EnvironmentFile=/path/to/sms-activate/.env
+ExecStart=/path/to/sms-activate/venv/bin/python /path/to/sms-activate/bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+

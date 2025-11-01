@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  sms-activate-bot:
+    build: .
+    container_name: sms-activate-bot
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - SMS_ACTIVATE_API_KEY=${SMS_ACTIVATE_API_KEY}
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
+

@@ -1,0 +1,172 @@
+═══════════════════════════════════════════════════════════════
+   SMS-ACTIVATE BOT - READY TO DEPLOY
+═══════════════════════════════════════════════════════════════
+
+✅ Your bot token is configured!
+   Token: 7345502778:AAE43KA9WO4sDRdyo8CYL9igkzzuadyQdnc
+
+═══════════════════════════════════════════════════════════════
+   COMPLETE THESE 3 STEPS TO START
+═══════════════════════════════════════════════════════════════
+
+STEP 1: GET YOUR TELEGRAM USER ID
+──────────────────────────────────
+1. Open Telegram app
+2. Search for: @userinfobot
+3. Click Start
+4. Copy the number it shows (example: 123456789)
+
+STEP 2: SET SUPERUSER ID IN BOT.PY
+───────────────────────────────────
+1. Open file: bot.py
+2. Find line 31 (near the top)
+3. Change this line:
+   FROM: SUPERUSER_ID = 0
+   TO:   SUPERUSER_ID = 123456789  (use your actual ID)
+4. Save the file
+
+STEP 3: GET SMS-ACTIVATE API KEY
+─────────────────────────────────
+1. Visit: https://sms-activate.ae
+2. Create account or login
+3. Go to API section in settings
+4. Copy your API key
+5. Create file named: .env
+6. Add these lines to .env file:
+
+TELEGRAM_BOT_TOKEN=7345502778:AAE43KA9WO4sDRdyo8CYL9igkzzuadyQdnc
+SMS_ACTIVATE_API_KEY=YOUR_API_KEY_HERE
+
+Replace YOUR_API_KEY_HERE with your actual key.
+
+═══════════════════════════════════════════════════════════════
+   RUN THE BOT (EASIEST WAY)
+═══════════════════════════════════════════════════════════════
+
+Open Terminal and type:
+
+cd /Users/abdurakhmon/Desktop/sms-activate
+./quick_start.sh
+
+That's it! The bot will start automatically.
+
+═══════════════════════════════════════════════════════════════
+   ALTERNATIVE: MANUAL START
+═══════════════════════════════════════════════════════════════
+
+cd /Users/abdurakhmon/Desktop/sms-activate
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python3 bot.py
+
+═══════════════════════════════════════════════════════════════
+   TEST YOUR BOT
+═══════════════════════════════════════════════════════════════
+
+1. Open Telegram
+2. Search for your bot (the name from @BotFather)
+3. Click Start
+4. Choose language: Uzbek / Russian / English
+5. Try command: /balance
+
+═══════════════════════════════════════════════════════════════
+   FEATURES OVERVIEW
+═══════════════════════════════════════════════════════════════
+
+✅ 3 Languages: English, Russian, Uzbek (O'zbek)
+✅ User Balance System: Each user has separate balance
+✅ Superuser Powers: You control everything
+✅ Main Balance Hidden: Users don't see API balance
+✅ Auto Refunds: Cancelled orders refund automatically
+✅ Transaction History: Full tracking of all operations
+✅ Statistics: View all user activity
+
+═══════════════════════════════════════════════════════════════
+   SUPERUSER COMMANDS (ONLY YOU)
+═══════════════════════════════════════════════════════════════
+
+/stats                          - View bot statistics
+/users                          - List all users
+/mainbalance                    - Check main API balance
+/addbalance <user_id> <amount>  - Add balance to user
+/deductbalance <user_id> <amount> - Remove balance from user
+/allhistory                     - View all transactions
+
+Example: /addbalance 123456789 1000
+This adds 1000 RUB to user with ID 123456789
+
+═══════════════════════════════════════════════════════════════
+   USER COMMANDS (EVERYONE)
+═══════════════════════════════════════════════════════════════
+
+/balance     - Check balance
+/deposit     - Request top-up (shows them to contact you)
+/services    - View available services
+/countries   - View available countries
+/prices      - Check prices
+/buy wa 2    - Buy WhatsApp number for Kazakhstan
+/myorders    - View active orders
+/check 12345 - Check SMS for order ID
+/cancel 12345 - Cancel order (refund balance)
+/history     - View transaction history
+/language    - Change language
+
+═══════════════════════════════════════════════════════════════
+   HOW IT WORKS
+═══════════════════════════════════════════════════════════════
+
+1. User registers → Gets 0 balance
+2. User sends /deposit → Sees message to contact you
+3. You add balance → /addbalance <user_id> <amount>
+4. User buys number → Balance deducted automatically
+5. If cancelled → Balance refunded automatically
+
+═══════════════════════════════════════════════════════════════
+   EXAMPLE WORKFLOW
+═══════════════════════════════════════════════════════════════
+
+Scenario: User wants WhatsApp number for Kazakhstan
+
+USER:
+/start                    → Selects language
+/balance                  → Sees: 0 RUB
+/deposit                  → Sees: Contact admin with User ID
+(Contacts you to pay)
+
+YOU (Admin):
+/addbalance 987654321 500 → Adds 500 RUB to user
+
+USER:
+/balance                  → Sees: 500 RUB
+/buy wa 2                 → Buys number (cost: ~15 RUB)
+/check 123456             → Checks for SMS
+(Receives SMS code)
+
+Final balance: 485 RUB
+
+═══════════════════════════════════════════════════════════════
+   FILE STRUCTURE
+═══════════════════════════════════════════════════════════════
+
+bot.py          - Main bot code
+database.py     - User & transaction management
+languages.py    - Multi-language support
+config.py       - Configuration loader
+users.json      - Database (created automatically)
+.env            - Your credentials (create this!)
+
+═══════════════════════════════════════════════════════════════
+   NEED HELP?
+═══════════════════════════════════════════════════════════════
+
+📖 READ: START_HERE.md (detailed guide)
+📖 READ: INSTALL_GUIDE.md (step by step)
+📖 READ: SERVICE_CODES.md (service & country codes)
+
+═══════════════════════════════════════════════════════════════
+
+Good luck! 🚀
+
+═══════════════════════════════════════════════════════════════
+

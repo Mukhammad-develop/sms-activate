@@ -1,0 +1,186 @@
+{
+  "users": {
+    "7514237434": {
+      "user_id": 7514237434,
+      "username": "lupin_hoja_toshboltayev",
+      "first_name": "Lupin-hoja",
+      "balance": 1.7249999999999996,
+      "language": "en",
+      "created_at": "2025-11-01T10:13:46.487520",
+      "total_spent": 100.4625,
+      "total_activations": 7
+    }
+  },
+  "transactions": [
+    {
+      "user_id": 7514237434,
+      "amount": 100.0,
+      "type": "add",
+      "description": "Added by admin 7514237434",
+      "timestamp": "2025-11-01T10:36:00.703310"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 0.2625,
+      "type": "deduct",
+      "description": "Order 4361488914: oi in country 175",
+      "timestamp": "2025-11-01T10:36:17.431917"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 0.2625,
+      "type": "add",
+      "description": "Refund for order 4361488914",
+      "timestamp": "2025-11-01T10:38:24.178145"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 0.4,
+      "type": "deduct",
+      "description": "Order 4361555885: am in country 39",
+      "timestamp": "2025-11-01T10:58:28.774381"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 0.4,
+      "type": "add",
+      "description": "Refund for order 4361555885",
+      "timestamp": "2025-11-01T11:01:48.134386"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 5.25,
+      "type": "deduct",
+      "description": "Order 4361604451: tg in country 129",
+      "timestamp": "2025-11-01T11:14:16.179444"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 0.525,
+      "type": "deduct",
+      "description": "Order 4361627824: oi in country 175",
+      "timestamp": "2025-11-01T11:22:02.860935"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 0.525,
+      "type": "add",
+      "description": "Refund for order 4361627824",
+      "timestamp": "2025-11-01T11:24:16.541523"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 88.0,
+      "type": "deduct",
+      "description": "Deducted by admin 7514237434",
+      "timestamp": "2025-11-01T11:44:33.494154"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 3.0,
+      "type": "deduct",
+      "description": "Deducted by admin 7514237434",
+      "timestamp": "2025-11-01T11:48:00.707613"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 0.825,
+      "type": "deduct",
+      "description": "Order 4361715095: tg in country 36",
+      "timestamp": "2025-11-01T11:48:53.792679"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 1.8,
+      "type": "deduct",
+      "description": "Order 4361742005: wb in country 175",
+      "timestamp": "2025-11-01T11:57:02.809999"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 0.4,
+      "type": "deduct",
+      "description": "Order 4361789134: ig in country 175",
+      "timestamp": "2025-11-01T12:11:18.183381"
+    },
+    {
+      "user_id": 7514237434,
+      "amount": 1.0,
+      "type": "add",
+      "description": "Added by admin 7514237434",
+      "timestamp": "2025-11-01T12:59:47.108322"
+    }
+  ],
+  "activations": [
+    {
+      "user_id": 7514237434,
+      "activation_id": "4361488914",
+      "phone_number": "61468117521",
+      "service": "oi",
+      "country": "175",
+      "cost": 0.2625,
+      "status": "cancelled",
+      "created_at": "2025-11-01T10:36:17.432469"
+    },
+    {
+      "user_id": 7514237434,
+      "activation_id": "4361555885",
+      "phone_number": "541151178380",
+      "service": "am",
+      "country": "39",
+      "cost": 0.4,
+      "status": "cancelled",
+      "created_at": "2025-11-01T10:58:28.775408"
+    },
+    {
+      "user_id": 7514237434,
+      "activation_id": "4361604451",
+      "phone_number": "306994830878",
+      "service": "tg",
+      "country": "129",
+      "cost": 5.25,
+      "status": "active",
+      "created_at": "2025-11-01T11:14:16.179923"
+    },
+    {
+      "user_id": 7514237434,
+      "activation_id": "4361627824",
+      "phone_number": "61468118034",
+      "service": "oi",
+      "country": "175",
+      "cost": 0.525,
+      "status": "cancelled",
+      "created_at": "2025-11-01T11:22:02.861587"
+    },
+    {
+      "user_id": 7514237434,
+      "activation_id": "4361715095",
+      "phone_number": "17828582406",
+      "service": "tg",
+      "country": "36",
+      "cost": 0.825,
+      "status": "active",
+      "created_at": "2025-11-01T11:48:53.793471"
+    },
+    {
+      "user_id": 7514237434,
+      "activation_id": "4361742005",
+      "phone_number": "61468117812",
+      "service": "wb",
+      "country": "175",
+      "cost": 1.8,
+      "status": "active",
+      "created_at": "2025-11-01T11:57:02.810971"
+    },
+    {
+      "user_id": 7514237434,
+      "activation_id": "4361789134",
+      "phone_number": "61468115201",
+      "service": "ig",
+      "country": "175",
+      "cost": 0.4,
+      "status": "active",
+      "created_at": "2025-11-01T12:11:18.184615"
+    }
+  ]
+}
