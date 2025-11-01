@@ -295,7 +295,7 @@ class SMSActivateBot:
         
         # Back to main menu button
         @self.bot.message_handler(func=lambda message: message.text in [
-            "🔙 Back to Main Menu", "🔙 Главное меню", "🔙 Asosiy menyu"
+            "🔙 Back to Main Menu", "🔙 Главное меню", "🔙 Назад в главное меню", "🔙 Asosiy menyu"
         ])
         def button_back_main(message):
             self.handle_back_to_main(message)
@@ -769,6 +769,21 @@ class SMSActivateBot:
                 return
         
         welcome_text = get_text(lang, 'welcome', admin=self.get_admin_contact())
+        
+        # Add Privacy Policy and Terms agreement
+        privacy_link = "https://rentry.co/SMS-ACTIVATE-BOBO"
+        if lang == 'en':
+            welcome_text += f"\n\n🚫 *Privacy Policy & Terms*\n\n"
+            welcome_text += f"By continuing to use this bot, you agree to our [Privacy Policy & Terms and Conditions]({privacy_link}).\n\n"
+            welcome_text += f"Please read them carefully before using the service."
+        elif lang == 'ru':
+            welcome_text += f"\n\n🚫 *Политика конфиденциальности и Условия*\n\n"
+            welcome_text += f"Продолжая использовать этого бота, вы соглашаетесь с нашей [Политикой конфиденциальности и Условиями использования]({privacy_link}).\n\n"
+            welcome_text += f"Пожалуйста, внимательно прочитайте их перед использованием сервиса."
+        else:  # uz
+            welcome_text += f"\n\n🚫 *Maxfiylik Siyosati va Foydalanish Shartlari*\n\n"
+            welcome_text += f"Ushbu botdan foydalanishni davom ettirish orqali siz bizning [Maxfiylik Siyosati va Foydalanish Shartlarimizga]({privacy_link}) rozilik bildirasiz.\n\n"
+            welcome_text += f"Iltimos, xizmatdan foydalanishdan oldin diqqat bilan o'qing."
         
         # Get appropriate keyboard
         if self.is_superuser(user_id):
@@ -1601,6 +1616,22 @@ class SMSActivateBot:
                     
                     # Show welcome message with keyboard
                     welcome_text = get_text(lang_code, 'welcome', admin=self.get_admin_contact())
+                    
+                    # Add Privacy Policy and Terms agreement
+                    privacy_link = "https://rentry.co/SMS-ACTIVATE-BOBO"
+                    if lang_code == 'en':
+                        welcome_text += f"\n\n🚫 *Privacy Policy & Terms*\n\n"
+                        welcome_text += f"By continuing to use this bot, you agree to our [Privacy Policy & Terms and Conditions]({privacy_link}).\n\n"
+                        welcome_text += f"Please read them carefully before using the service."
+                    elif lang_code == 'ru':
+                        welcome_text += f"\n\n🚫 *Политика конфиденциальности и Условия*\n\n"
+                        welcome_text += f"Продолжая использовать этого бота, вы соглашаетесь с нашей [Политикой конфиденциальности и Условиями использования]({privacy_link}).\n\n"
+                        welcome_text += f"Пожалуйста, внимательно прочитайте их перед использованием сервиса."
+                    else:  # uz
+                        welcome_text += f"\n\n🚫 *Maxfiylik Siyosati va Foydalanish Shartlari*\n\n"
+                        welcome_text += f"Ushbu botdan foydalanishni davom ettirish orqali siz bizning [Maxfiylik Siyosati va Foydalanish Shartlarimizga]({privacy_link}) rozilik bildirasiz.\n\n"
+                        welcome_text += f"Iltimos, xizmatdan foydalanishdan oldin diqqat bilan o'qing."
+                    
                     keyboard = get_admin_keyboard(lang_code) if self.is_superuser(user_id) else get_main_keyboard(lang_code)
                     
                     self.bot.send_message(

@@ -113,7 +113,7 @@ def get_purchase_submenu(lang: str) -> types.ReplyKeyboardMarkup:
             types.KeyboardButton("📊 Buyurtmalarim")
         )
         markup.add(
-            types.KeyboardButton("🔙 Asosiy menyuga qaytish")
+            types.KeyboardButton("🔙 Asosiy menyu")
         )
     
     return markup
